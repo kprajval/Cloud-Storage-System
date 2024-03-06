@@ -5,7 +5,7 @@ from threading import Thread
 
 SERVER_PORT = 12345
 BUFFER_SIZE = 4096
-BASE_DIRECTORY = 'C:/Users/Prajval/Desktop/server_upload'
+BASE_DIRECTORY = 'path of your cloud storage directory'
 CERTFILE = 'projectCertificate.crt'
 KEYFILE = 'projectKey.key'
 
@@ -71,8 +71,7 @@ def main():
         os.makedirs(BASE_DIRECTORY)
 
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    #server_socket.bind(('0.0.0.0', SERVER_PORT))
-    server_socket.bind(('192.168.249.163', SERVER_PORT))
+    server_socket.bind(('server_ip_address', SERVER_PORT))
     server_socket.listen(5)
 
     print(f"[*] Listening on port {SERVER_PORT}")
