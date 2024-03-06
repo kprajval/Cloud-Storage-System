@@ -2,10 +2,10 @@ import os
 import socket
 import ssl
 
-SERVER_HOST = 'Praveena'
+SERVER_HOST = 'hostname according to your certificate'
 SERVER_PORT = 12345
 BUFFER_SIZE = 4096
-CERTFILE = 'projectCertificate.crt'
+CERTFILE = 'path of the certificate file'
 DOWNLOADS_FOLDER = os.path.join(os.path.expanduser('~'), 'Downloads')
 
 
@@ -63,7 +63,7 @@ def main():
         ssl_context.load_verify_locations(CERTFILE)
 
         client_ssl_socket = ssl_context.wrap_socket(client_socket, server_hostname=SERVER_HOST)
-        client_ssl_socket.connect((SERVER_HOST, SERVER_PORT))
+        client_ssl_socket.connect(('server ip address, SERVER_PORT))
 
         while True:
             print("\n1. List files")
