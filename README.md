@@ -13,6 +13,13 @@ Prerequisites
     Python 3.x
     OpenSSL library
     Certificates: Both server and client require valid SSL/TLS certificates for secure communication. Ensure that the certificates are generated and stored correctly.
+    use openssl to generate your certificates. 
+    Commands : 
+        for generating private key :  openssl genrsa -out private.key 2048
+        for generating certificate signing request(csr) file : openssl req -new -key private.key -out csr.pem
+        for generating a self signed certificate : openssl x509 -req -days 365 -in csr.pem -signkey private.key -out certificate.crt
+            remeber : 
+                while exectuting the thrid command it asks you details where "common name" is the "host name in the programs"
 
 Usage
 
