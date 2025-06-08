@@ -33,14 +33,3 @@ Security Considerations
 
     Certificate Management: Proper management of SSL/TLS certificates is crucial for secure communication. Ensure that certificates are generated, stored, and configured correctly on both the server and client sides.
     Secure File Handling: Implement secure file handling practices to prevent unauthorized access or tampering of files during transfer.
-
-Disclaimer
-
-This project is developed for educational and learning purposes. Use it responsibly and ensure compliance with applicable laws and regulations regarding data privacy and security. The developers are not liable for any misuse or unauthorized use of this software.
-Contributors
-
-    Kurumeti Prajval
-
-License
-
-This project is licensed under the MIT License. Feel free to modify and distribute the code for personal and commercial use.
